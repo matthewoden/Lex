@@ -7,7 +7,7 @@ defmodule Lex.Config do
       region = Map.get(config, :region, "us-east-1")
 
       config = %{
-        session_timeout: Map.get(config, :session_timeout, 60 * 1000 * 5),
+        session_timeout: Map.get(config, :session_timeout, 60 * 5),
         json_parser: Map.get(config, :json_parser, Lex.Json.Jason),
         http_adapter: get_or_raise(config, :http_adapter),
         region: region,
