@@ -44,7 +44,7 @@ defmodule Lex.Runtime.Conversations do
 
   @doc false
   @spec converse(user, context) :: :ok
-  def converse(user, context \\ "default", timeout) do
+  def converse(user, context \\ "default") do
     GenServer.cast(__MODULE__, {:converse, user, context})
   end
 
