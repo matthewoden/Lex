@@ -20,7 +20,7 @@ defmodule Lex.MixProject do
   defp deps do
     [
       {:hedwig, "~> 1.0"},
-      {:httpoison, "~> 0.13", optional: true},
+      {:httpoison, "~> 1.2", optional: true},
       {:httpotion, "~> 3.0", optional: true},
       {:jason, "~> 1.0", optional: true},
       {:http_builder, "~> 0.4"},
