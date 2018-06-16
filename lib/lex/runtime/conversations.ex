@@ -63,10 +63,7 @@ defmodule Lex.Runtime.Conversations do
   defp valid_connversations(state) do
     conversations =
       state.conversations
-      |> Enum.filter(fn {_, expires} -> 
-          now = NaiveDateTime.utc_now()
-          expires < now
-        end)
+      |> Enum.filter(fn {_, expires} ->  expires > NaiveDateTime.utc_now() end)
       |> Map.new()
   
     Map.put(state, :conversations, conversations)
